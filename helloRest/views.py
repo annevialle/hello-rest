@@ -53,3 +53,14 @@ def deactivate_box(request, pk):
         return HttpResponse(status=201)
     else:
     	return HttpResponse(status=404)
+
+def spin_box(request, pk):
+
+	if request.method == 'GET':
+		box = Box.objects.get(pk=pk)
+
+		if box.spin:
+
+			return HttpResponse("true")
+		else:
+			return HttpResponse("false")

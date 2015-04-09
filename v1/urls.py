@@ -12,5 +12,7 @@ urlpatterns = [
     url(r'^hello/(?P<pk>[0-9]+)/$', views.HelloDetail.as_view()),
     url(r'^box/(?P<sender>[0-9]+)/(?P<receiver>[0-9]+)/spin/$', views.activate_box),
     url(r'^box/(?P<pk>[0-9]+)/nospin/$', views.deactivate_box),
-    url(r'^box/(?P<pk>[A-Za-z0-9]+)/$', views.BoxDetail.as_view()),
+    url(r'^box/(?P<pk>[A-Za-z0-9]+)/detail/$', views.BoxDetail.as_view()),
+    url(r'^box/(?P<pk>[A-Za-z0-9]+)/$', views.spin_box),
+
 ]
